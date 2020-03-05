@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Upload</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="mt-5 col-6 offset-md-3">
+          <%= typeof msg !== 'undefined' ? msg : '' %>
+          <form action="/file" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <div class="custom-file">
+                <input
+                  type="file"
+                  id="myfile"
+                  class="custom-file-input"
+                  name="imagename"
+                />
+                <label class="custom-file-label" for="myfile"
+                  >Choose file</label
+                >
+              </div>
+            </div>
+            <div class="form-control">
+              <input
+                type="submit"
+                value="Upload"
+                class="btn btn-outline-dark btn-block"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
